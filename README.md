@@ -22,13 +22,13 @@ ZJUI_ECE_220/
 │   ├── Lec 09 Pointers and Arrays
 │   ├── Lec 10 Strings and Multi-dimensional Arrays
 │   ├── Lec 11 Problem Solving with Pointers and Arrays
-│   └── Lec 12&13 Recursion, recursive sorting and Recursion
-│   └── Lec 14 File I/O in C
-│   └── Lec 15 Data Structures
-│   └── Lec 16 Dynamic Memory Allocation
-│   └── Lec 17 Linked List
-│   └── Lec 18 Problem solving with linked lists
-│   └── Lec 19 Linked data structures & C to LC3
+│   ├── Lec 12&13 Recursion, recursive sorting and Recursion
+│   ├── Lec 14 File I/O in C
+│   ├── Lec 15 Data Structures
+│   ├── Lec 16 Dynamic Memory Allocation
+│   ├── Lec 17 Linked List
+│   ├── Lec 18 Problem solving with linked lists
+│   ├── Lec 19 Linked data structures & C to LC3
 │   └── Lec 20 Introduction to C++
 ├── Lecture_notes_PDF_version/
 │   ├── Lec 01 InputOutput of LC-3.pdf
@@ -42,14 +42,49 @@ ZJUI_ECE_220/
 │   ├── Lec 09 Pointers and Arrays.pdf
 │   ├── Lec 10 Strings and Multi-dimensional Arrays.pdf
 │   ├── Lec 11 Problem Solving with Pointers and Arrays.pdf
-│   └── Lec 12&13 Recursion, recursive sorting and Recursion.pdf
-│   └── Lec 14 File I/O in C.pdf
-│   └── Lec 15 Data Structures.pdf
-│   └── Lec 16 Dynamic Memory Allocation.pdf
-│   └── Lec 17 Linked List.pdf
-│   └── Lec 18 Problem solving with linked lists.pdf
-│   └── Lec 19 Linked data structures & C to LC3.pdf
+│   ├── Lec 12&13 Recursion, recursive sorting and Recursion.pdf
+│   ├── Lec 14 File I/O in C.pdf
+│   ├── Lec 15 Data Structures.pdf
+│   ├── Lec 16 Dynamic Memory Allocation.pdf
+│   ├── Lec 17 Linked List.pdf
+│   ├── Lec 18 Problem solving with linked lists.pdf
+│   ├── Lec 19 Linked data structures & C to LC3.pdf
 │   └── Lec 20 Introduction to C++.pdf
+├── Specific_Topic/
+│   ├── C++ OOP.md
+│   ├── C++ OOP.pdf
+│   ├── Templates in C++.md
+│   ├── Templates in C++.pdf
+│   ├── C++ 迭代器.md
+│   ├── C++ 迭代器.pdf
+│   ├── 二叉树（C与C++）.md
+│   ├── 二叉树（C与C++）.pdf
+│   ├── 运行时栈详解.md
+│   └── 运行时栈详解.pdf
+├── Final_Mock_Test&Answers/
+│   ├── F18/
+│   │   ├── ECE220-F18.pdf
+│   │   ├── ECE220-F18-Answer.pdf
+│   │   └── ECE220-F18-Answer.md
+│   ├── F20/
+│   │   ├── ECE220-F20.pdf
+│   │   ├── ECE220-F20-Answer.pdf
+│   │   └── ECE220-F20-Answer.md
+│   ├── F20(UIUC)/
+│   │   ├── ECE220 F20 Answer(UIUC).pdf
+│   │   └── ECE220 F20 Answer(UIUC).md
+│   ├── Final Sample/
+│   │   ├── Final Sample.pdf
+│   │   ├── Final Sample Answer.pdf
+│   │   └── Final Sample Answer.md
+│   └── S18/
+│       ├── ECE220-S18.pdf
+│       ├── ECE220-S18-Answer.pdf
+│       └── ECE220-S18-Answer.md
+├── Codes/
+│   ├── Person.cpp
+│   ├── Virtual.cpp
+│   └── operator_overload.cpp
 ├── LICENSE
 ├── .gitattributes
 └── README.md

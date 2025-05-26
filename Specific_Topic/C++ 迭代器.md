@@ -34,7 +34,7 @@
 
   - 解引用：``*it获取当前元素值，可写*it = new_val;``修改。
   - 增减：``++it`向前移动，`--it`向后移动（列表支持双向）。
-  - 比较：``it != myList.end()``，``it == anotherIt`等。
+  - 比较：``it != myList.end()``，`it == anotherIt`等。
 
 - 使用示例：
 
@@ -45,5 +45,4 @@
   } // Output: 1 2 3
   ```
 
-  对于自定义类型，如``struct Student { std::string name; }``，可写``std::list<Student>::iterator it;``，访问如``it->name`
-
+  对于自定义类型，如``struct Student { std::string name; }``，可写``std::list<Student>::iterator it;``，访问如`it->name`

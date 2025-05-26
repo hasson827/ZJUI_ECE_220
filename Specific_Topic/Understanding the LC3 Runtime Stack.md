@@ -40,7 +40,7 @@ free(sf);
 
 以图式形式，运行时栈看起来如下：
 
-![stack](https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/stack.png)
+<img src="https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/stack.png" alt="stack" style="zoom:67%;" />
 
 这表示三个嵌套的函数调用，当前正在执行的函数`function3`位于栈顶，并由`head`指向。你可以访问栈帧的所有字段（例如`head->param1`或`head->local1`）。通过`next`，你可以访问`function2`栈帧中的字段（例如`head->next->local1`）
 
@@ -61,11 +61,11 @@ free(sf);
 
 函数调用开始时，调用者将参数从右到左压入栈中。结果是，在进入函数之前，栈看起来像这样：
 
-![pushParam](https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/pushParam.png)
+<img src="https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/pushParam.png" alt="pushParam" style="zoom:67%;" />
 
 然后代码使用`JSR`开始实行函数。现在轮到被调用函数接管。如果函数有返回值，它必须分配一些空间来存储它。通过将它放在栈上，返回时调用者可以通过简单地弹出它来获取该值。它还应该存储返回地址，以便这个函数可以调用其他函数。为了预留返回值的存储空间，函数只需调整栈指针（ `ADD R6,R6,#-1` ）。返回地址可以通过 `PUSH R7` 来保存。完成这两个步骤后，栈的状态如下：
 
-![overhead](https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/overhead.png)
+<img src="https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/overhead.png" alt="overhead" style="zoom:67%;" />
 
 要完成栈帧的创建，需要两件事：
 
@@ -76,13 +76,13 @@ free(sf);
 
 最后，通过递减栈指针`R6`来分配局部变量的空间。此时，栈看起来像是这样：
 
-![final](https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/final.png)
+<img src="https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/final.png" alt="final" style="zoom:67%;" />
 
 ## 带有三个嵌套函数调用的栈
 
 注意三个函数在栈上是连续的。也就是说，被调用函数的最后一个参数紧邻调用函数的最后一个局部变量：
 
-![functions3](https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/functions3.png)
+<img src="https://www.cs.colostate.edu/~fsieker/misc/runtimeStack/functions3.png" alt="functions3" style="zoom:50%;" />
 
 ## 销毁运行时栈
 

@@ -115,7 +115,7 @@ public:
     int getCols() const {return cols_;}
     double getValue(int row, int col) const {return grid[row * cols + col]};
     Position getPosition(int row, int col) const {
-        Position p1 = Position(row, col);
+        Position p1 = Position(row*cellSize_, col*cellSize_);
         return p0_ + p1; // 利用运算符重载，在Position类中进行了定义
     }
     void setValue(int row, int col, double value){
@@ -138,7 +138,7 @@ public:
         }
         this->positions = new Position[rows * cols];
         int i = 0;
-        for (std::list<Position>::const_iterator it = positions.begin(); it != positions.end() && i < rows * cols; ++it, i++){
+        for (std::list<Position>::iterator it = positions.begin(); it != positions.end() && i < rows * cols; ++it, i++){
             this->positions[i] = *it;
         }
     } // 以上为参数化构造函数

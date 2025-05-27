@@ -11,10 +11,41 @@
 int find_maxSum(int* arr, int* start, int* finish, int n)
 {
       // initialize sum, maxSum
-    int sum = 0, maxSum =0;   
-}
- 
+    int sum = 0, maxSum =0;
+    *start = 0; // Initialize starting index
+    *finish = -1; // Initialize ending index
+    int local_start = 0; // Initialize local starting index
+    for (int i = 0; i < n; i++) {
+        sum += arr[i]; // Add current element to sum
 
+        // If current sum is greater than maxSum, update maxSum and finish index
+        if (sum > maxSum) {
+            maxSum = sum;
+            *start = local_start; // Update start index
+            *finish = i; // Update finish index
+        }
+
+        // If current sum becomes negative, reset it and update local starting index
+        if (sum < 0) {
+            sum = 0;
+            local_start = i + 1; // Move local start to next index
+        }
+    }
+    // If maxSum is still 0, it means all elements are negative
+    if (maxSum == 0) {
+        *start = 0; // Set start to first index
+        *finish = n - 1; // Set finish to last index
+        maxSum = arr[0]; // Set maxSum to the first element
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > maxSum) {
+                maxSum = arr[i]; // Find the maximum single element
+                *start = i; // Update start index
+                *finish = i; // Update finish index
+            }
+        }
+    }
+    return maxSum; // Return the maximum sum found 
+}
  
 int main(int argc, char **argv)
 {   int i, n, start, finish, maxSum;

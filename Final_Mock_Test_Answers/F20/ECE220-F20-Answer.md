@@ -220,18 +220,24 @@ SUM_POST_ORDER
 	ADD R5, R6, #0 ; 现在R5和R6都位于第一个局部变量处
 	AND R1, R1, #0 ; 初始化R1
 	; Check Base Case
-	LDR R0, R6, #0; load NODE, R0 = node
+	LDR R0, R6, #4; load NODE, R0 = node
 	BRz DONE
 	; SumPostOrder(node->left)
 	LDR R2, R0, #1 ; 现在R2 = node->left
 	ADD R6, R6, #-1 ; update stack pointer
 	STR R2, R6, #0 ; Push argument
 	JSR SUM_POST_ORDER
+	LDR R2, R6, #0 ; store return value in TEMP
+	ADD R1, R1, R2 ; Add TEMP to SUM
+	ADD R6, R6, #2 ; stack teardown
+	
 	LDR R2, R0, #0 ; 把node->value存入R2
 	ADD R1, R1, R2 ; Sum += node->value
 DONE
 	STR R1, R6, #3 ; store return value
 	...
+； Callee Tear-down...
+	RET
 ```
 
 ## Problem 5

@@ -142,15 +142,15 @@ public:
 };
 
 Triangle::Triangle(){ // 默认构造函数
-    this->point1 = new Point(0, 0);
-    this->point2 = new Point(1, 0);
-    this->point3 = new Point(0, 1);
+    this->point1 = Point(0, 0);
+    this->point2 = Point(1, 0);
+    this->point3 = Point(0, 1);
 }
 
 Triangle::Triangle(const Triangle &t){ // 复制构造函数
-    this->point1 = t->point1;
-    this->point2 = t->point2;
-    this->point3 = t->point3;
+    this->point1 = t.point1;
+    this->point2 = t.point2;
+    this->point3 = t.point3;
 }
 
 Triangle::Triangle(const Point & p1, const Point & p2, const Point & p3){ // 参数化构造函数

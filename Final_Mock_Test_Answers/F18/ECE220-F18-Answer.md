@@ -150,14 +150,17 @@ return (head == head->next ? NULL : head->next);
 DL_FIRST ; R6位于head的地址
 	LDR R0, R6, #0 ; R0 = head
 	LDR R1, R0, #1 ; R1 = head->next
+	LDR R2, R0, #1 ; R2 = head->next
+	AND R3, R3, #0 ; R3 = 0
 	NOT R1, R1
 	ADD R1, R1, #1 ; R1 = -head->next
+	ADD R6, R6, #-1 ; leave space for return value
 	ADD R1, R1, R0 ; R1 = head - head->next
 	BRz EQUAL
-	LDR R1, R0, #1 ; R1 = head->next
+	STR R3, R6, #0
+	RET
 EQUAL
-	ADD R6, R6, #-1 ; leave space for return value
-	STR R1, R6, #0
+	STR R2, R6, #0
 	RET
 ```
 

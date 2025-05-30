@@ -53,9 +53,9 @@ RTO
 
 ### Part D
 
-The bug appears at line: **19**
+The bug appears at line: **10**
 
-The bug is due to: 2 different types data cannot be added by “+”, they need type transformation.
+The bug is due to: After definning the paramatic constructor, the class have to clearly define another non-parameter constructor. 
 
 ### Part E
 

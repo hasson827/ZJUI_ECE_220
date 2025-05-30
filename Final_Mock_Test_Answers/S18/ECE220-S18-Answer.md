@@ -207,7 +207,7 @@ struct horse_t {
 
    ``` c
    static horse_t my_stable[42];
-   horse_t* h = find_element(my_stable, 42, sizeof(my_stable[0]), &my_favorite, compare_horses);
+   horse_t* h = find_element(my_stable, 42, sizeof(my_stable[0]), my_favorite, compare_horses);
    ```
 
 ## Problem 4

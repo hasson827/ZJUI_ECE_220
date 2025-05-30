@@ -229,9 +229,9 @@ SUM_POST_ORDER
 	JSR SUM_POST_ORDER
 	LDR R2, R6, #0 ; store return value in TEMP
 	ADD R1, R1, R2 ; Add TEMP to SUM
-	ADD R6, R6, #2 ; stack teardown
+	ADD R6, R6, #1 ; stack teardown
 	
-	LDR R2, R0, #0 ; 把node->value存入R2
+	LDg R2, R0, #0 ; 把node->value存入R2
 	ADD R1, R1, R2 ; Sum += node->value
 DONE
 	STR R1, R6, #3 ; store return value

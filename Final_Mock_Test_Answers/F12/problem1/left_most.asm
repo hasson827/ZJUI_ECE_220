@@ -34,7 +34,11 @@ RSTACK
 ; }
 LEFT_MOST
     ; TODO: Setup activation record
-
+    ADD R6, R6, #-2
+    STR R7, R6, #0
+    ADD R6, R6, #-1
+    STR R5, R6, #0
+    ADD R5, R6, #-1
     ; TODO: Check if root->left is NULL, if it is, branch to DONE
     ; if (!root->left)
 
